@@ -1,0 +1,1384 @@
+ytes from 192.168.14.112: icmp_seq=2 ttl=64 time=0.147 ms
+64 bytes from 192.168.14.112: icmp_seq=3 ttl=64 time=0.176 ms
+64 bytes from 192.168.14.112: icmp_seq=4 ttl=64 time=0.182 ms
+64 bytes from 192.168.14.112: icmp_seq=5 ttl=64 time=0.184 ms
+64 bytes from 192.168.14.112: icmp_seq=6 ttl=64 time=0.178 ms
+64 bytes from 192.168.14.112: icmp_seq=7 ttl=64 time=0.163 ms
+64 bytes from 192.168.14.112: icmp_seq=8 ttl=64 time=0.181 ms
+64 bytes from 192.168.14.112: icmp_seq=9 ttl=64 time=0.183 ms
+64 bytes from 192.168.14.112: icmp_seq=10 ttl=64 time=0.147 ms
+64 bytes from 192.168.14.112: icmp_seq=11 ttl=64 time=0.181 ms
+64 bytes from 192.168.14.112: icmp_seq=12 ttl=64 time=0.146 ms
+64 bytes from 192.168.14.112: icmp_seq=13 ttl=64 time=0.126 ms
+64 bytes from 192.168.14.112: icmp_seq=14 ttl=64 time=0.176 ms
+64 bytes from 192.168.14.112: icmp_seq=15 ttl=64 time=0.181 ms
+64 bytes from 192.168.14.112: icmp_seq=16 ttl=64 time=0.184 ms
+64 bytes from 192.168.14.112: icmp_seq=17 ttl=64 time=0.153 ms
+64 bytes from 192.168.14.112: icmp_seq=18 ttl=64 time=0.184 ms
+64 bytes from 192.168.14.112: icmp_seq=19 ttl=64 time=0.148 ms
+64 bytes from 192.168.14.112: icmp_seq=20 ttl=64 time=0.125 ms
+64 bytes from 192.168.14.112: icmp_seq=21 ttl=64 time=0.125 ms
+64 bytes from 192.168.14.112: icmp_seq=22 ttl=64 time=0.190 ms
+64 bytes from 192.168.14.112: icmp_seq=23 ttl=64 time=0.152 ms
+64 bytes from 192.168.14.112: icmp_seq=24 ttl=64 time=0.178 ms
+64 bytes from 192.168.14.112: icmp_seq=25 ttl=64 time=0.157 ms
+64 bytes from 192.168.14.112: icmp_seq=26 ttl=64 time=0.134 ms
+64 bytes from 192.168.14.112: icmp_seq=27 ttl=64 time=0.172 ms
+64 bytes from 192.168.14.112: icmp_seq=28 ttl=64 time=0.155 ms
+64 bytes from 192.168.14.112: icmp_seq=29 ttl=64 time=0.183 ms
+64 bytes from 192.168.14.112: icmp_seq=30 ttl=64 time=0.125 ms
+^C
+--- 192.168.14.112 ping statistics ---
+30 packets transmitted, 30 received, 0% packet loss, time 723ms
+rtt min/avg/max/mdev = 0.125/0.163/0.190/0.022 ms
+[root@ICX28 28-1]# scp 28core-1.tgz zhaojie@192.168.14.112
+[root@ICX28 28-1]# ls
+28core-1.tgz                   __edp_thread_view_summary.csv
+__edp_core_view_details.csv    emon.dat
+__edp_core_view_summary.csv    emon-m.dat
+__edp_socket_view_details.csv  emon-v.dat
+__edp_socket_view_summary.csv  summary.xlsx
+__edp_system_view_details.csv  zhaojie@10.238.0.63
+__edp_system_view_summary.csv  zhaojie@192.168.14.112
+__edp_thread_view_details.csv
+[root@ICX28 28-1]# scp 28core-1.tgz zhaojie@192.168.14.112:/tmp/
+zhaojie@192.168.14.112's password:
+[root@ICX28 28-1]# scp 28core-1.tgz zhaojie@192.168.14.112:
+zhaojie@192.168.14.112's password:
+28core-1.tgz                                  100%   18MB  11.2MB/s   00:01
+[root@ICX28 28-1]# history
+  345  cd onednn_cpu/
+  346  ;s
+  347  cd ../llvm_openmp/
+  348  ls
+  349  cd ../../..
+  350  bazel clean
+  351  bazel build $CUDA_FLAG //rec_addons/
+  352  bazel build $CUDA_FLAG //rec_addons/...
+  353  cd bazel-bin/
+  354  ls
+  355  cd rec_addons/
+  356  ls
+  357  cd rec_addons_test.runfiles/
+  358  ;s
+  359  ls
+  360  cd llvm_openmp/
+  361  ls
+  362  pwd
+  363  pwd
+  364  cd ../..
+  365  pwd
+  366  cd ../..
+  367  pwd
+  368  bash tools/testing/build_and_run_tests.sh
+  369  bash tools/testing/build_and_run_tests.sh
+  370  bash tools/testing/build_and_run_tests.sh
+  371  git status
+  372  git add WORKSPACE build_deps/build_pip_pkg.sh  rec_addons/BUILD rec_addons/custom_ops/feature_column/BUILD tools/install_so_files.sh tools/testing/build_and_run_tests.sh
+  373  git add rec_addons/ third_party/
+  374  bazel build build_pip_pkg
+  375  bazel-bin/build_pip_pkg artifacts
+  376  pip install artifacts/rec_addons-*.whl
+  377  pip install artifacts/rec_addons-*.whl
+  378  ls
+  379  pwd
+  380  bash tools/testing/build_and_run_tests.sh
+  381  python3 ./configure.py
+  382  bazel build build_pip_pkg
+  383  bazel-bin/build_pip_pkg artifacts
+  384  bash tools/run_sanity_check.sh
+  385  export http_proxy=http://child-prc.intel.com:913
+  386  export https_proxy=http://child-prc.intel.com:913
+  387  bash tools/run_sanity_check.sh
+  388  bash tools/pre-commit.sh
+  389  git status
+  390  git diff
+  391  git status
+  392  git add third_party/onednn/BUILD
+  393  python tools/format.py
+  394  bash tools/testing/build_and_run_tests.sh
+  395  git status
+  396  git add rec_addons/
+  397  git status
+  398  git commit -s
+  399  exit
+  400  bash tools/pre-commit.sh
+  401  export http_proxy=http://child-prc.intel.com:913
+  402  export https_proxy=http://child-prc.intel.com:913
+  403  bash tools/pre-commit.sh
+  404  bash tools/testing/build_and_run_tests.sh
+  405  cd ..
+  406  ls
+  407  exit
+  408  ls
+  409  bash tools/testing/build_and_run_tests.sh
+  410  exit
+  411  bash tools/run_cpu_tests.sh
+  412  bash tools/run_cpu_tests.sh
+  413  bash tools/run_cpu_tests.sh
+  414  bash tools/run_cpu_tests.sh | tee -a debug.log
+  415  bash tools/run_cpu_tests.sh
+  416  bash tools/run_cpu_tests.sh
+  417  bash tools/run_cpu_tests.sh
+  418  bash tools/run_cpu_tests.sh
+  419  bash tools/run_cpu_tests.sh
+  420  bash tools/run_cpu_tests.sh
+  421  exit
+  422  ls
+  423  ls
+  424  bash tools/run_cpu_tests.sh
+  425  git push
+  426  git push -f
+  427  git status
+  428  git diff tools/docker/cpu_tests.Dockerfile
+  429  git add tools/docker/cpu_tests.Dockerfile
+  430  git commit -s --amend
+  431  git push -f
+  432  git add tools/docker/cpu_tests.Dockerfile
+  433  git commit -s --amend
+  434  git push -f
+  435  git add tools/docker/cpu_tests.Dockerfile
+  436  git commit -s --amend
+  437  source ./venv-py3.6-tf2.6/bin/activate
+  438  ls
+  439  bash tools/run_cpu_tests.sh
+  440  cd ..
+  441  ls
+  442  cd rec-addons/
+  443  ls
+  444  bash tools/run_cpu_tests.sh
+  445  export http_proxy=http://child-prc.intel.com:913
+  446  export https_proxy=http://child-prc.intel.com:913
+  447  bash tools/run_cpu_tests.sh
+  448  export http_proxy=http://child-prc.intel.com:913
+  449  export https_proxy=http://child-prc.intel.com:913
+  450  bash tools/run_cpu_tests.sh
+  451  pwd
+  452  bash tools/run_cpu_tests.sh
+  453  bash tools/run_cpu_tests.sh
+  454  bash tools/run_cpu_tests.sh
+  455  bash tools/run_cpu_tests.sh
+  456  bash tools/run_cpu_tests.sh
+  457  bash tools/run_cpu_tests.sh
+  458  bash tools/run_cpu_tests.sh
+  459  export http_proxy=http://child-prc.intel.com:913
+  460  export https_proxy=http://child-prc.intel.com:913
+  461  bash tools/run_cpu_tests.sh
+  462  bash tools/run_cpu_tests.sh
+  463  bash tools/run_cpu_tests.sh
+  464  bash tools/run_cpu_tests.sh
+  465  bash tools/run_cpu_tests.sh
+  466  ls
+  467  git status
+  468  git diff tools/docker/cpu_tests.Dockerfile
+  469  ls
+  470  bash tools/run_cpu_tests.sh
+  471  git diff tools/docker/cpu_tests.Dockerfile
+  472  git add tools/docker/cpu_tests.Dockerfile
+  473  ls
+  474  python3 ./configure.py
+  475  bazel build build_pip_pkg
+  476  bazel-bin/build_pip_pkg artifacts
+  477  cd rec_addons/feature_column/tests/
+  478  ls
+  479  python embedding_
+  480  python embedding_gemm_test.py
+  481  cd ../
+  482  ls
+  483  cd ../..
+  484  ls
+  485  ls
+  486  git status
+  487  git diff  rec_addons/custom_ops/feature_column/cc/kernels/embedding_gemm_op.cc
+  488  ls
+  489  ls
+  490  git add rec_addons/custom_ops/feature_column/cc/kernels/embedding_gemm_op.cc
+  491  git commit -s --amend
+  492  su
+  493  ls
+  494  cd /home/pujiang/
+  495  ls
+  496  cd DeepRec
+  497  ls
+  498  cat .git/config
+  499  git pull
+  500  grep dense_hashmap * -R
+  501  grep dense_hash * -R
+  502  vim tensorflow/core/framework/embedding/dense_hash_map.h
+  503  grep DenseHashMap * -R
+  504  vim third_party/0001-Avoid-fetching-nullptr-when-use-featrue-filter.patch
+  505  grep "Embedding Variable" * -R
+  506  vim tensorflow/python/ops/kv_variable_ops.py
+  507  grep gen_kv_variable_ops * -R
+  508  vim tensorflow/python/ops/kv_variable_ops.py
+  509  grep initialize_kv_variable_op * -R
+  510  vim tensorflow/tools/api/golden/v1/tensorflow.pbtxt
+  511  vim tensorflow/python/ops/kv_variable_ops.py
+  512  grep ht_partition_num * -R
+  513  ls tensorflow/core/kernels/
+  514  ls tensorflow/core/kernels/ |grep gen
+  515  vim tensorflow/core/kernels/kv_variable_ops.cc
+  516  grep EmbeddingVar * -R
+  517  clear
+  518  grep EmbeddingVar * -R
+  519  grep EmbeddingVar * -R |grep class
+  520  vim tensorflow/core/framework/embedding/embedding_var.h
+  521  cd /root/
+  522  ls
+  523  cd EasyRec/
+  524  ls
+  525  cd experiments/
+  526  ls
+  527  rm -rf dlrm_criteo/
+  528  cd ..
+  529  ls
+  530  cd ..
+  531  history
+  532  cd EasyRec/
+  533  pwd
+  534  exit
+  535  dmidecode -t memory
+  536  ls
+  537  df -h
+  538  cd /
+  539  ls
+  540  cd root
+  541  ls
+  542  rm -rf sep_private_5_32_linux_013109108d9bbb1
+  543  rm -rf sep_private_5_32_linux_013109108d9bbb1.tar.bz2
+  544  df -h
+  545  ls
+  546  du -sh tera
+  547  cd tera
+  548  ls
+  549  who
+  550  rm -rf tera
+  551  df -h
+  552  ls
+  553  cd ..
+  554  rm -rf tera
+  555  df -h
+  556  ls
+  557  cd /home/pujiang/
+  558  ls
+  559  rm -f tokens
+  560  ls
+  561  exit
+  562  cpupower
+  563  cpupower frequency-info
+  564  exit
+  565  cd /home/
+  566  ls
+  567  top
+  568  ls
+  569  cd pujiang/
+  570  ls
+  571  cd oneDNN/
+  572  git status
+  573  cd ..
+  574  scp -r oneDNN/ pujiang@192.168.14.210:/home/pujiang/
+  575  ls
+  576  cd /home/pujiang/oneDNN/
+  577  ls
+  578  git status
+  579  vim mlp_test.cpp
+  580  vim matmul_wrapper.h
+  581  vim mlp_test.cpp
+  582  sh build.sh
+  583  ll
+  584  cat build.sh
+  585  ldd test
+  586  cat run.sh
+  587  scp test pujiang@192.168.14.205:/home/pujiang/tmp/
+  588  ls
+  589  cd /home/pujiang/
+  590  ls
+  591  cd oneDNN/
+  592  ls
+  593  cd src
+  594  grep store * -R
+  595  vim cpu/x64/matmul/brgemm_matmul_copy_utils.cpp
+  596  cd cpu/
+  597  grep store * -R
+  598  clear
+  599  grep store * -R
+  600  clear
+  601  grep store * -R >/tmp/t
+  602  vim /tmp/t
+  603  source /home/pujiang/.tf2/bin/activate
+  604  pip uninstall tensorflow
+  605  pip install tensorflow==2.9
+  606  /home/pujiang/.tf2/bin/python -m pip install --upgrade pip
+  607  pip install tensorflow==2.9
+  608  python
+  609  scl -l
+  610  python3.8
+  611  rm -rf /home/pujiang/.tf2/
+  612  whereis python3.8
+  613  which python3.8
+  614  /usr/bin/python3.8
+  615  virtualenv /home/pujiang/.tf2 -p /usr/bin/python3.8
+  616  source /home/pujiang/.tf2/bin/activate
+  617  python
+  618  pip install tensorflow==2.9
+  619  df -h
+  620  cd
+  621  ls
+  622  du -sh *
+  623  who
+  624  df -h
+  625  ls
+  626  du -sh *
+  627  cd EasyRec/
+  628  git status
+  629  cd ..
+  630  ls
+  631  ll
+  632  date
+  633  rm -rf sort
+  634  df -h
+  635  pip install tensorflow==2.9
+  636  /home/pujiang/.tf2/bin/python -m pip install --upgrade pip
+  637  cd /home/pujiang/
+  638  ls
+  639  cd oneDNN/
+  640  cd src
+  641  cd cpu/
+  642  grep store *
+  643  grep store * -R
+  644  vim x64/matmul/brgemm_matmul_copy_utils.cpp
+  645  ctags -R
+  646  vim x64/matmul/brgemm_matmul_copy_utils.cpp
+  647  ls
+  648  cd ..
+  649  cd /tmp
+  650  vim test.cpp
+  651  g++ -S test.cpp
+  652  vim test.s
+  653  g++ -S test.cpp
+  654  vim test.s
+  655  gcc --version
+  656  git chekcout v2.9.1
+  657  git checkcout v2.9.1
+  658  git checkout v2.9.1
+  659  git checkout -- third_party/eigen3/gpu_packet_math.patch
+  660  git checkout v2.9.1
+  661  scp pujiang@192.168.14.210:/home/pujiang/bazel .
+  662  export PATH=./:$PATH
+  663  ./configure
+  664  cat build.sh
+  665  gcc --version
+  666  which gcc
+  667  which g++
+  668  export CC=/opt/rh/gcc-toolset-9/root/usr/bin/gcc
+  669  export CXX=/opt/rh/gcc-toolset-9/root/usr/bin/g++
+  670  ls
+  671  cat build.sh
+  672  bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
+  673  find /usr -name Python.h
+  674  yum install python38-devel
+  675  ./configure
+  676  cat build.sh
+  677  bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
+  678  bazel build --config=opt -copt="-I/usr/include/python3.8" //tensorflow/tools/pip_package:build_pip_package
+  679  bazel build --config=opt --copt="-I/usr/include/python3.8" //tensorflow/tools/pip_package:build_pip_package
+  680  rm
+  681  exit
+  682  cd /home/pujiang/
+  683  ls
+  684  cd tensorflow/
+  685  git pull
+  686  git status
+  687  vim third_party/eigen3/gpu_packet_math.patch
+  688  cp third_party/eigen3/gpu_packet_math.patch .
+  689  git status
+  690  ll
+  691  ls *.patch
+  692  ls
+  693  ll
+  694  ls
+  695  gcc --version
+  696  scl -l
+  697  scl enable gcc-toolset-9 bash
+  698  exit
+  699  ll /home/
+  700  find / -name release.sh
+  701  exit
+  702  cd /home/pujiang/
+  703  ls
+  704  cd oneDNN/
+  705  ls
+  706  ll
+  707  git status
+  708  cat build
+  709  cat build.sh
+  710  scp *.h *.cpp build.sh run.sh sae@192.168.14.104:/home/sae/pujiang/oneDNN/
+  711  exit
+  712  cd /tmp
+  713  vim test.cpp
+  714  g++ test.cpp
+  715  ./a.out
+  716  g++ test.cpp -O2
+  717  ./a.out
+  718  vim test.cpp
+  719  g++ test.cpp -O2
+  720  ./a.out
+  721  taskset -c 1 ./a.out
+  722  g++ test.cpp -O2
+  723  cat test.cpp
+  724  man getcpu
+  725  cd /tmp
+  726  vim test.cpp
+  727  man getcpu
+  728  cd /tmp
+  729  vim test2.cpp
+  730  g++ test2.cpp
+  731  man getcpu
+  732  uname -a
+  733  man sched_getcpu
+  734  vim test2.cpp
+  735  g++ test2.cpp
+  736  ./a.out
+  737  tasklscpu
+  738  taskset -c 28 ./a.out
+  739  taskset -c 84 ./a.out
+  740  taskset -c 55 ./a.out
+  741  taskset -c 27 ./a.out
+  742  taskset -c 56 ./a.out
+  743  taskset -c 0 ./a.out
+  744  ./a.out
+  745  cd /home/pujiang/
+  746  ls
+  747  cd cesg.tools.intrinsic-gemm/
+  748  ls
+  749  cd small_gemm/
+  750  ls
+  751  git status
+  752  ls
+  753  g++ --version
+  754  make
+  755  vim Makefile
+  756  make
+  757  git status
+  758  git diff sgemm_kernel
+  759  git diff sgemm_kernel.h
+  760  git checkout -- sgemm_kernel.h
+  761  make
+  762  ./test_fixmn
+  763  ls
+  764  vim test_fixmn.cpp
+  765  cp test_fixmn.cpp test_perf.cpp
+  766  vim test_perf.cpp
+  767  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  768  ./test_perf
+  769  ./test_perf 128
+  770  vim test_perf.cpp
+  771  vim timer.h
+  772  vim test_perf.cpp
+  773  vim timer.h
+  774  vim test_perf.cpp
+  775  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  776  ./test_perf
+  777  ./test_perf 128
+  778  vim test_perf.cpp
+  779  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  780  ./test_perf
+  781  ./test_perf 128
+  782  taskset -c 1 ./test_perf 128
+  783  taskset -c 1 ./test_perf 64
+  784  g++ --version
+  785  scl -l
+  786  scl enable gcc-toolset-10 bash
+  787  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  788  taskset -c 1 ./test_perf 64
+  789  taskset -c 1 ./test_perf 128
+  790  ll
+  791  vim benchmark_kernel
+  792  ./benchmark_kernel
+  793  vim benchmark_kernel.cpp
+  794  ll
+  795  mv benchmark_kernel benchmark_kernel.bak
+  796  ll
+  797  ./benchmark_kernel.bak
+  798  cat Makefile
+  799  g++ -mavx512f -O3 -std=c++17 -fopenmp benchmark_kernel.cpp -o benchmark_kernel
+  800  ./benchmark_kernel
+  801  taskset -c 1 ./benchmark_kernel
+  802  ls
+  803  vim test_perf.cpp
+  804  g++ -mavx512f -O2 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  805  ./test_perf
+  806  ./test_perf 128
+  807  ./test_perf 1280
+  808  ./test_perf 12
+  809  ./test_perf 1
+  810  vim test_perf.cpp
+  811  ./test_perf 30
+  812  vim test_perf.cpp
+  813  g++ -mavx512f -O2 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  814  ./test_perf 30
+  815  vim test_perf.cpp
+  816  g++ -mavx512f -O2 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  817  ./test_perf 128
+  818  ./test_perf 64
+  819  g++ -mavx512f -O2 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  820  ./test_perf 64
+  821  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  822  ./test_perf 64
+  823  ./test_perf 128
+  824  cat /tmp/test.cpp
+  825  vim test_perf.cpp
+  826  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  827  man syscall
+  828  cat /tmp/test.cpp
+  829  vim test_perf.cpp
+  830  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  831  vim test_perf.cpp
+  832  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  833  ./test_perf
+  834  ./test_perf 128
+  835  taskset -c 1 ./test_perf 128
+  836  g++ -mavx512f -O2 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  837  taskset -c 1 ./test_perf 128
+  838  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  839  taskset -c 1 ./test_perf 128
+  840  vim sgemm_kernel.h
+  841  vim test_perf.cpp
+  842  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  843  taskset -c 1 ./test_perf 128
+  844  vim test_perf.cpp
+  845  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  846  taskset -c 1 ./test_perf 128
+  847  taskset -c 1 ./test_perf 64
+  848  vim test_perf.cpp
+  849  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  850  taskset -c 1 ./test_perf 64
+  851  taskset -c 1 ./test_perf 128
+  852  taskset -c 2 ./test_perf 128
+  853  vim test_perf.cpp
+  854  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  855  taskset -c 2 ./test_perf 128
+  856  vim test_perf.cpp
+  857  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  858  taskset -c 2 ./test_perf 128
+  859  vim test_perf.cpp
+  860  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  861  taskset -c 2 ./test_perf 128
+  862  perstat taskset -c 2 ./test_perf 128
+  863  perf stat taskset -c 2 ./test_perf 128
+  864  taskset -c 2 ./test_perf 128
+  865  perf stat taskset -c 2 ./test_perf 128
+  866  top
+  867  ls
+  868  perf stat taskset -c 2 ./test_perf 128
+  869  perf stat taskset -c 2 ./test_perf 64
+  870  perf stat taskset -c 2 ./test_perf 128
+  871  perf stat taskset -c 2 ./test_perf 64
+  872  perf stat taskset -c 2 ./test_perf 128
+  873  perf stat taskset -c 2 ./test_perf 64
+  874  perf stat taskset -c 2 ./test_perf 128
+  875  taskset -c 2 ./test_perf 128
+  876  perf stat taskset -c 2 ./test_perf 128
+  877  ls
+  878  vim test_perf.cpp
+  879  g++ -mavx512f -O3 -std=c++17 -fopenmp test_perf.cpp -o test_perf
+  880  ./test_perf
+  881  ./test_perf  128
+  882  perf stat ./test_perf  128
+  883  taskset -c 1 perf stat ./test_perf  128
+  884  vim test_perf.cpp
+  885  cp sgemm_kernel.h sgemm_kernel_events.h
+  886  vim test_perf.cpp
+  887  g++ -mavx512f -O3 -std=c++17 -fopenmp benchmark_kernel.cpp -o benchmark_kernel
+  888  ls
+  889  vim test_perf.cpp
+  890  vim benchmark_kernel.cpp
+  891  g++ -mavx512f -O3 -std=c++17 -fopenmp benchmark_kernel.cpp -o benchmark_kernel
+  892  ./benchmark_kernel
+  893  vim benchmark_kernel.cpp
+  894  g++ -mavx512f -O3 -std=c++17 -fopenmp benchmark_kernel.cpp -o benchmark_kernel
+  895  ./benchmark_kernel
+  896  vim benchmark_kernel.cpp
+  897  vim sgemm_kernel_events.h
+  898  vim test_perf.cpp
+  899  vim sgemm_kernel_events.h
+  900  g++ -mavx512f -O3 -std=c++17 -fopenmp benchmark_kernel.cpp -o benchmark_kernel
+  901  taskset -c 1 perf stat ./test_perf  128
+  902  ./benchmark_kernel
+  903  ./benchmark_kernel > /tmp/log
+  904  vim /tmp/log
+  905  perf stat taskset -c 1 ./benchmark_kernel > /tmp/log
+  906  vim /tmp/log'
+  907  ls
+  908  ./benchmark_kernel.bak
+  909  ls
+  910  perf stat taskset -c 1 ./benchmark_kernel > /tmp/log
+  911  vim /tmp/log
+  912  ls
+  913  cd ..
+  914  ls
+  915  cd multi_matmul/
+  916  ls
+  917  git status
+  918  ls
+  919  vim create_multi_matmul.py
+  920  pwd
+  921  ls
+  922  vim packed_matmul_op.cc
+  923  ls
+  924  cd ..
+  925  scp -r cesg.tools.intrinsic-gemm/ 192.168.14.104:/home/sae/pujiang/
+  926  scp -r cesg.tools.intrinsic-gemm/ sae@192.168.14.104:/home/sae/pujiang/
+  927  ifconfig
+  928  ls
+  929  cd cesg.tools.intrinsic-gemm/
+  930  ls
+  931  cd small_gemm/
+  932  ls
+  933  cd /home/pujiang/
+  934  ls
+  935  cd cesg.tools.intrinsic-gemm/
+  936  ls
+  937  cd multi_matmul/
+  938  ls
+  939  cd ..
+  940  cd small_gemm/
+  941  ls
+  942  ./test_perf
+  943  ./test_perf 128
+  944  g++ --version
+  945  cat Makefile
+  946  lscpu
+  947  cd /home/pujiang/
+  948  ls
+  949  cd oneDNN/
+  950  git branch
+  951  git status
+  952  scp build.sh dnnl_wrapper_util.h matmul_wrapper.h mlp_test.cpp run.sh timer.h pujiang@192.168.14.239:/home/pujiang/oneDNN/
+  953  exit
+  954  ls
+  955  cd /home/pujiang/tensorflow/
+  956  l;s
+  957  ls
+  958  git status
+  959  ls
+  960  cd /home/pujiang/
+  961  ls
+  962  cd tensorflow/
+  963  ls
+  964  export PATH=./:$PATH
+  965  source /home/pujiang/.tf2/bin/activate
+  966  ./configure
+  967  cat build.sh
+  968  nohup bazel build --config=dbg //tensorflow/tools/pip_package:build_pip_package &
+  969  tail -f nohup.out
+  970  ls
+  971  cd /home/pujiang/tensorflow/
+  972  ls
+  973  tail -f nohup.out
+  974  cat build.sh
+  975  nohup bazel build --config=dbg //tensorflow/tools/pip_package:build_pip_package &
+  976  bazel clean
+  977  source /home/pujiang/.tf2/bin/activate
+  978  export PATH=./:$PATH
+  979  bazel clean
+  980  nohup bazel build --config=dbg //tensorflow/tools/pip_package:build_pip_package &
+  981  pwd
+  982  nohup bazel build --config=dbg //tensorflow/tools/pip_package:build_pip_package &
+  983  cat /root/.cache/bazel/_bazel_root/3a774584f77b95d5cd1e53968137dc39/server/jvm.out
+  984  nohup bazel build --config=dbg //tensorflow/tools/pip_package:build_pip_package &
+  985  df -h
+  986  export
+  987  exit
+  988  git
+  989  git clone https://github.com/oneapi-src/oneDNN.git
+  990  ped
+  991  pwd
+  992  cd /home
+  993  pwd
+  994  ls
+  995  mkdir -p zhaojie
+  996  cd zhaojie/
+  997  cd ~
+  998  ls
+  999  make
+ 1000  cmake
+ 1001  ls
+ 1002  cd home
+ 1003  cd /home
+ 1004  ls
+ 1005  cd /zhaojie
+ 1006  cd zhaojie
+ 1007  cd /root
+ 1008  mv oneDNN/ /home/zhaojie
+ 1009  cd /home/zhaojie
+ 1010  ls
+ 1011  cd oneDNN/
+ 1012  ls
+ 1013  cd cmake
+ 1014  ls
+ 1015  cd ..
+ 1016  ls
+ 1017  cat CMakeLists.txt
+ 1018  ls
+ 1019  cd cmake
+ 1020  ls
+ 1021  cat OpenCL.cmake
+ 1022  cd ..
+ 1023  ls
+ 1024  mkdir -p build
+ 1025  cd build
+ 1026  pwd
+ 1027  cmake ..
+ 1028  make -j
+ 1029  ls
+ 1030  cd Makefile
+ 1031  ls -a
+ 1032  ls -F
+ 1033  cd CmakeFile
+ 1034  cd CMakeFile
+ 1035  cd CMakeFiles
+ 1036  ls
+ 1037  cd ..
+ 1038  ctest
+ 1039  conda
+ 1040  where is conda
+ 1041  whereis conda
+ 1042  ls /usr/bin/
+ 1043  ls -ll /usr/bin/conda
+ 1044  ls -ls /usr/bin/conda
+ 1045  ls -ln /usr/bin/conda
+ 1046  whereis anaconda
+ 1047  ctest
+ 1048  conda env create -f ../doc/environment.yml
+ 1049  ifconfig
+ 1050  lscpu
+ 1051  pwd
+ 1052  cd /home/pujiang/
+ 1053  cd oneDNN/
+ 1054  git status
+ 1055  pwd
+ 1056  vim mlp_test.cpp
+ 1057  scp pujiang@192.168.14.239:/home/pujiang/oneDNN/mlp_test.cpp .
+ 1058  vim mlp_test.cpp
+ 1059  sh build.sh
+ 1060  cat run.sh
+ 1061  sh run.sh
+ 1062  lscpu
+ 1063  cpupower
+ 1064  cpupower frequency-set -u 2.0g -d 2.0g
+ 1065  cpupower
+ 1066  cpupower idle-info
+ 1067  ls
+ 1068  for((i=31;i<56;i+=4)); do taskset -c 28-$i ./test; done
+ 1069  for((i=31;i<56;i+=4)); do taskset -c 28-$i sh run.sh; done
+ 1070  vim mlp_test.cpp
+ 1071  sh build.sh
+ 1072  for((i=31;i<56;i+=4)); do taskset -c 28-$i sh run.sh; done
+ 1073  taskset -c 28-31 sh run.sh
+ 1074  vim mlp_test.cpp
+ 1075  sh build.sh
+ 1076  taskset -c 28-31 sh run.sh
+ 1077  vim mlp_test.cpp
+ 1078  sh build.sh
+ 1079  taskset -c 28-31 sh run.sh
+ 1080  for((i=31;i<56;i+=4)); do taskset -c 28-$i sh run.sh; done
+ 1081  for((i=31;i<56;i+=4)); do taskset -c 28-$i sh run.sh |grep Gflops; done
+ 1082  for((i=31;i<56;i+=4)); do taskset -c 28-$i sh run.sh |grep Gflops |awk '{print $1}'; done
+ 1083  ls -l /opt/intel/emon
+ 1084  source /opt/intel/emon/sep_vars.sh
+ 1085  emon
+ 1086  cd /home/pujiang/
+ 1087  ls
+ 1088  cd emon_data/
+ 1089  ls
+ 1090  cat collect.sh
+ 1091  cd /home/zhaojie/
+ 1092  ls
+ 1093  vim collect.sh
+ 1094  cd /home/pujiang/
+ 1095  cd oneDNN/
+ 1096  vim mlp_test.cpp
+ 1097  vim run.sh
+ 1098  taskset -c 28-55 sh run.sh &
+ 1099  sh colfg
+ 1100  fg
+ 1101  top
+ 1102  htop
+ 1103  cd /home/zhaojie/
+ 1104  ls
+ 1105  cat collect.sh
+ 1106  sh collect.sh
+ 1107  scl -l
+ 1108  mkdir 1-28
+ 1109  taskset -c 28-55 sh run.sh
+ 1110  cat run.sh
+ 1111  cd ..
+ 1112  cd pujiang
+ 1113  ls
+ 1114  cd oneDNN/
+ 1115  ls
+ 1116  cat run.sh
+ 1117  vim run.sh
+ 1118  taskset -c 28-55 sh run.sh
+ 1119  cat build.sh
+ 1120  ps -ef
+ 1121  top
+ 1122  taskset -c 28-55 sh run.sh
+ 1123  taskset -c 28-31 sh run.sh
+ 1124  taskset -c 28-35 sh run.sh
+ 1125  taskset -c 28-39 sh run.sh
+ 1126  taskset -c 28-43 sh run.sh
+ 1127  taskset -c 28-47 sh run.sh
+ 1128  taskset -c 28-51 sh run.sh
+ 1129  taskset -c 28-55 sh run.sh
+ 1130  taskset -c 28-31 sh run.sh
+ 1131  taskset -c 28-35 sh run.sh
+ 1132  taskset -c 28-39 sh run.sh
+ 1133  taskset -c 28-43 sh run.sh
+ 1134  taskset -c 28-47 sh run.sh
+ 1135  taskset -c 28-51 sh run.sh
+ 1136  taskset -c 28-55 sh run.sh
+ 1137  taskset -c 28-31 sh run.sh
+ 1138  taskset -c 28-35 sh run.sh
+ 1139  taskset -c 28-39 sh run.sh
+ 1140  taskset -c 28-43 sh run.sh
+ 1141  taskset -c 28-47 sh run.sh
+ 1142  taskset -c 28-51 sh run.sh
+ 1143  taskset -c 28-55 sh run.sh
+ 1144  taskset -c 28-31 sh run.sh
+ 1145  taskset -c 28-35 sh run.sh
+ 1146  taskset -c 28-39 sh run.sh
+ 1147  taskset -c 28-43 sh run.sh
+ 1148  taskset -c 28-47 sh run.sh
+ 1149  taskset -c 28-51 sh run.sh
+ 1150  taskset -c 28-55 sh run.sh
+ 1151  taskset -c 28-31 sh run.sh
+ 1152  emon
+ 1153  ls
+ 1154  cd ..
+ 1155  ls
+ 1156  ls /root/intel/
+ 1157  cd /root/intel/
+ 1158  ls
+ 1159  cat sep_emon_isip
+ 1160  cat isip
+ 1161  cd /home/
+ 1162  ls
+ 1163  whereis emon
+ 1164  cd /home
+ 1165  ls
+ 1166  cd pujiang
+ 1167  ls
+ 1168  cd..
+ 1169  cd ..
+ 1170  cd zhaojie
+ 1171  ls
+ 1172  cd 1-28/
+ 1173  ls
+ 1174  cd ..
+ 1175  cd oneDNN/
+ 1176  ls
+ 1177  cd ..
+ 1178  cd pujiang
+ 1179  ls
+ 1180  cd oneDNN/
+ 1181  ls
+ 1182  cd tests
+ 1183  ls
+ 1184  cd ..
+ 1185  ls
+ 1186  cd .
+ 1187  cd..
+ 1188  cd ..
+ 1189  ls
+ 1190  grep collect
+ 1191  grep baidu
+ 1192  cd ..
+ 1193  cd zhaojie
+ 1194  ls
+ 1195  cd oneDNN
+ 1196  ls
+ 1197  cd build
+ 1198  ls
+ 1199  conda env create -f ../doc/environment.yml
+ 1200  conda activate onednn-doc
+ 1201  cmake --build . --target doc
+ 1202  cmake --build . --target install
+ 1203  cd ..
+ 1204  ls
+ 1205  cd doc
+ 1206  ls
+ 1207  cd ..
+ 1208  ls
+ 1209  cd build
+ 1210  ls
+ 1211  conda env
+ 1212  conda list
+ 1213  conda deactivate
+ 1214  conda list
+ 1215  conda activate onednn-doc
+ 1216  cd ..
+ 1217  ls
+ 1218  cat collect.sh
+ 1219  cd ..
+ 1220  cd pujiang
+ 1221  ls
+ 1222  cd emon_data
+ 1223  ls
+ 1224  cd ..
+ 1225  ls
+ 1226  cd one DNN
+ 1227  cd oneDNN
+ 1228  ls
+ 1229  vim mlp_test.cpp
+ 1230  sh build.sh
+ 1231  conda deactivate
+ 1232  sh build.sh
+ 1233  taskset -c 28-31 sh run.sh
+ 1234  taskset -c 28-31 sh run.sh&
+ 1235  ps -ef| grep 3894041
+ 1236  taskset -c 28-31 sh run.sh&
+ 1237  ps -ef| grep 3894041
+ 1238  taskset -c 28-31 sh run.sh&
+ 1239  ps -ef| grep 3894083
+ 1240  cd ..
+ 1241  cd zhaojie
+ 1242  ls
+ 1243  sh collect.sh
+ 1244  killall test
+ 1245  ls
+ 1246  cd emon.dat
+ 1247  emon -process-edp /opt/intel/sep/config/edp/edp_config.txt
+ 1248  cd ..
+ 1249  cd pujiang
+ 1250  s
+ 1251  ls
+ 1252  cd oneDNN/
+ 1253  ls
+ 1254  cat run.sh
+ 1255  cat build.s
+ 1256  cat build.sh
+ 1257  emon -help
+ 1258  emon --help
+ 1259  emon -- help
+ 1260  emon
+ 1261  ls
+ 1262  cd ..
+ 1263  cd zhaojie
+ 1264  ls
+ 1265  cp emon.dat /home/pujiang/oneDNN/
+ 1266  cd ..
+ 1267  cd pujiang/
+ 1268  cd oneDNN/
+ 1269  ls
+ 1270* emon -process-edp /opt/intel/sep/config/edp/edp_config.txtemon -process-edp /opt/intel/sep/config/edp/edp_config.txtemon -process-edp /opt/intel/sep/config/edp/edp_config.txt
+ 1271  ERROR: the metrics definition file /opt/intel/emon_nda_11.30_linux_111018263d8165d/bin64/../lib64/../config/edp/icelake_server_2s_private.xml does not exist.
+ 1272  lscpu
+ 1273  ls
+ 1274  source /opt/intel/sep/sep_vars.sh
+ 1275  emon -process-edp /opt/intel/sep/config/edp/edp_config.txt
+ 1276  ls
+ 1277  cd ..
+ 1278  cd zhaojie
+ 1279  ls
+ 1280  source /opt/intel/sep/sep_vars.sh
+ 1281  emon -process-edp /opt/intel/sep/config/edp/edp_config.txt
+ 1282  ls
+ 1283  cd ..
+ 1284  cd pujiang
+ 1285  cd oneDNN/
+ 1286  ls
+ 1287  cd ..
+ 1288  cd..
+ 1289  cd ..
+ 1290  cd zhaojie
+ 1291  ls
+ 1292  cd oneDNN/
+ 1293  ls
+ 1294  cd ..
+ 1295  ls
+ 1296  sh collect.sh
+ 1297  ls
+ 1298  mkdir 28core
+ 1299  ls
+ 1300  touch emon.dat
+ 1301  stat emon
+ 1302  stat emon.dat
+ 1303  sh collect.sh
+ 1304  stat emon.dat
+ 1305  ls
+ 1306  cd 28core
+ 1307  mkdir 28-1
+ 1308  mkdir 28-2
+ 1309  cd ..
+ 1310  mv emon.dat /28core/28-1
+ 1311  mv emon.dat 28core/28-1
+ 1312  ls
+ 1313  cd 28core
+ 1314  ls
+ 1315  cd 28-1
+ 1316  ls
+ 1317  cd ..
+ 1318  sh collect.sh
+ 1319  ls
+ 1320  mv emon.dat 28core/28-2
+ 1321  cd 28core/28-2
+ 1322  ls
+ 1323  source /opt/intel/sep/sep_vars.sh
+ 1324  emon -process-edp /opt/intel/sep/config/edp/edp_config.txt
+ 1325  ls
+ 1326  tar czf 28core-2.tgz *.csv summary.xlsx
+ 1327  ls
+ 1328  cd ..
+ 1329  cd 28-1
+ 1330  ls
+ 1331  source /opt/intel/sep/sep_vars.sh
+ 1332  emon -process-edp /opt/intel/sep/config/edp/edp_config.txt
+ 1333  ls
+ 1334  tar czf 28core-1.tgz *.csv summary.xlsx
+ 1335  ls
+ 1336  pwd
+ 1337  scp 28core-1.tgz zhaojie@10.238.0.63
+ 1338  ping 10.238.0.63
+ 1339  ping 192.168.14.112
+ 1340  scp 28core-1.tgz zhaojie@192.168.14.112
+ 1341  ls
+ 1342  scp 28core-1.tgz zhaojie@192.168.14.112:/tmp/
+ 1343  scp 28core-1.tgz zhaojie@192.168.14.112:
+ 1344  history
+ 1056  pwd
+ 1057  cd ..
+ 1058  cd tensorflow/
+ 1059  LLVM_SRC=/home/zhaojie/llvm-project/
+ 1060  LLVM_BAZEL_OVERLAY=${LLVM_SRC}/bazel
+ 1061  mkdir -p ${LLVM_BAZEL_OVERLAY}
+ 1062  python ${LLVM_SRC}/utils/bazel/overlay_directories.py     --src ${LLVM_SRC}     --overlay ${LLVM_SRC}/utils/bazel/llvm-project-overlay/     --target ${LLVM_BAZEL_OVERLAY}
+ 1063  touch ${LLVM_BAZEL_OVERLAY}/BUILD.bazel ${LLVM_BAZEL_OVERLAY}/WORKSPACE
+ 1064  echo 'llvm_targets = ["X86"]' > ${LLVM_BAZEL_OVERLAY}/llvm/targets.bzl
+ 1065  bazel build --override_repository=llvm-project=$LLVM_BAZEL_OVERLAY   -c opt tensorflow/compiler/mlir:tf-opt
+ 1066  df -h
+ 1067  cd ../..
+ 1068  ls
+ 1069  cd pujiang/
+ 1070  ls
+ 1071  cd ..
+ 1072  cd zhA
+ 1073  cd zhaojie/
+ 1074  ls
+ 1075  cd MLIR_Sample/
+ 1076  ls
+ 1077  cd ..
+ 1078  rm -rf MLIR_Sample/
+ 1079  df -h
+ 1080  cd ../pujiang/
+ 1081  ls
+ 1082  cd tensorflow/
+ 1083  ls
+ 1084  cd ..
+ 1085  cd zhaojie/
+ 1086  ls
+ 1087  Server terminated abruptly (error code: 14, error message: 'Connection reset by peer', log file: '/root/.cache/bazel/_bazel_root/f1902d5e8956729edc8c00728d79db0e/server/jvm.out')
+ 1088  df -h
+ 1089  cd /
+ 1090  ls
+ 1091  cd home
+ 1092  ls
+ 1093  cd ..
+ 1094  cd run
+ 1095  ls
+ 1096  cd user
+ 1097  ls
+ 1098  cd ..
+ 1099  cd /home/
+ 1100  ls
+ 1101  cd pujiang/
+ 1102  ls
+ 1103  history
+ 1104  cd ..
+ 1105  cd zhaojie
+ 1106  ls
+ 1107  cd tensorflow
+ 1108  ls
+ 1109  free -m
+ 1110  du -h
+ 1111  du
+ 1112  df -h
+ 1113  cd ..
+ 1114  ls
+ 1115  cd pujiang/
+ 1116  ls
+ 1117  cd oneDNN/
+ 1118  ls
+ 1119  cd ..
+ 1120  ls
+ 1121  cd ..
+ 1122  ls
+ 1123  df -h
+ 1124  cd /run/user/
+ 1125  cd /home/zhaojie/
+ 1126  ls
+ 1127  cp tensorflow/ /run
+ 1128  cp tensorflow /run
+ 1129  cp -r tensorflow /run
+ 1130  cd /run/tensorflow/
+ 1131  df -h
+ 1132  bazel build --override_repository=llvm-project=$LLVM_BAZEL_OVERLAY   -c opt tensorflow/compiler/mlir:tf-opt
+ 1133  ls
+ 1134  cd tensorflow/
+ 1135  ls
+ 1136  cd compiler/
+ 1137  ls
+ 1138  cd mlir/
+ 1139  ls
+ 1140  cd ..
+ 1141  ls
+ 1142  cd bazel-bin/
+ 1143  ls
+ 1144  cd ..
+ 1145  cd /home/zhaojie/
+ 1146  ls
+ 1147  cd llvm-project/
+ 1148  ls
+ 1149  cd bazel/
+ 1150  ls
+ 1151  cd mlir/
+ 1152  ls
+ 1153  cd ..
+ 1154  cd build/
+ 1155  ls
+ 1156  cd bin
+ 1157  ls
+ 1158  cd ..
+ 1159  ls
+ 1160  cd build/
+ 1161  ls
+ 1162  cd bin/
+ 1163  ls
+ 1164  cd ..
+ 1165  ls
+ 1166  cd /usr
+ 1167  ls
+ 1168  cd /run
+ 1169  ls
+ 1170  cd user
+ 1171  ls
+ 1172  cd ../tensorflow/
+ 1173  ls
+ 1174  cd bazel-bin/
+ 1175  ls
+ 1176  cd tensorflow/
+ 1177  ls
+ 1178  cd compiler/
+ 1179  ls
+ 1180  cd mlir/
+ 1181  ls
+ 1182  pwd
+ 1183  cd tensorflow/
+ 1184  ls
+ 1185  cd ..
+ 1186  cd tensorflow/
+ 1187  bazel build --override_repository=llvm-project=$LLVM_BAZEL_OVERLAY   -c opt tensorflow/compiler/mlir:tf-mlir-translate
+ 1188  ls
+ 1189  cd bazel-bin/
+ 1190  cd tensorflow/compiler/mlir/
+ 1191  ls
+ 1192  pwd
+ 1193  cd ..
+ 1194  cd ../..
+ 1195  cd ..
+ 1196  git clone https://github.com/tensorflow/mlir-hlo
+ 1197  ls
+ 1198  cd mlir-hlo/
+ 1199  ls
+ 1200  cd /home/zhaojie/llvm-project/
+ 1201  ls
+ 1202  git checkout e79532d28ced
+ 1203  cd /run
+ 1204  cd mlir-hlo/
+ 1205  build_tools/build_mlir.sh ${PWD}/llvm-project/ ${PWD}/llvm-build
+ 1206  ls
+ 1207  cd -
+ 1208  cd mlir-hlo/
+ 1209  cd /home/zhaojie/llvm-project/
+ 1210  ls
+ 1211  build_tools/build_mlir.sh /home/zhaojie/llvm-project/ ${PWD}/llvm-build
+ 1212  cd -
+ 1213  build_tools/build_mlir.sh /home/zhaojie/llvm-project/ ${PWD}/llvm-build
+ 1214  CMake Error at cmake/modules/HandleLLVMOptions.cmake:309 (message):
+ 1215  sudo yum install lld-10
+ 1216  lld --version
+ 1217  lld
+ 1218  find lld
+ 1219  whereis lld
+ 1220  build_tools/build_mlir.sh /home/zhaojie/llvm-project/ ${PWD}/llvm-build
+ 1221  Host compiler does not support '-fuse-ld=lld'ls
+ 1222  ls
+ 1223  cd cmake/
+ 1224  ls
+ 1225  cd modules/
+ 1226  ls
+ 1227  cd ..///
+ 1228  cd ..
+ 1229  cd llvm-build/
+ 1230  ls
+ 1231  cd CMakeFiles/
+ 1232  vim CMakeOutput.log
+ 1233  cd ../../..
+ 1234  ls
+ 1235  cd mlir-hlo/
+ 1236  ls
+ 1237  cd build_tools/
+ 1238  ls
+ 1239  vim build_mlir.sh
+ 1240  build_mlir.sh /home/zhaojie/llvm-project/ ${PWD}/llvm-buildcd
+ 1241  sh build_mlir.sh /home/zhaojie/llvm-project/ ${PWD}/llvm-build
+ 1242  cd ..
+ 1243  mkdir build && cd build
+ 1244  cmake .. -GNinja    -DLLVM_ENABLE_LLD=ON    -DCMAKE_BUILD_TYPE=Release    -DLLVM_ENABLE_ASSERTIONS=On    -DMLIR_DIR=${PWD}/../llvm-build/lib/cmake/mlir
+ 1245  cmake .. -GNinja    -DLLVM_ENABLE_LLD=ON    -DCMAKE_BUILD_TYPE=Release    -DLLVM_ENABLE_ASSERTIONS=On    -DMLIR_DIR=${PWD}/../llvm-build/lib/cmake/mlir
+ 1246  cd ..
+ 1247  ls
+ 1248  cd build_tools/
+ 1249  cd /../llvm-build/lib/cmake/mlir
+ 1250  cd ../llvm-build/lib/cmake/mlir
+ 1251  cd ..
+ 1252  cd llvm-build/
+ 1253  ls
+ 1254  tree
+ 1255  pwd
+ 1256  cd ..
+ 1257  ls
+ 1258  tree
+ 1259  build_tools/build_mlir.sh ${PWD}/llvm-project/ ${PWD}/llvm-build
+ 1260  build_tools/build_mlir.sh /home/zhaojie/llvm-project/ ${PWD}/llvm-build
+ 1261  cd build_tools/
+ 1262  ls
+ 1263  vim build_mlir.sh
+ 1264  build_tools/build_mlir.sh /home/zhaojie/llvm-project/ ${PWD}/llvm-build
+ 1265  cd ..
+ 1266  cd -
+ 1267  build_tools/build_mlir.sh /home/zhaojie/llvm-project/ ${PWD}/llvm-build
+ 1268  clang
+ 1269  cd build
+ 1270  cmake .. -GNinja    -DLLVM_ENABLE_LLD=ON    -DCMAKE_BUILD_TYPE=Release    -DLLVM_ENABLE_ASSERTIONS=On    -DMLIR_DIR=${PWD}/../llvm-build/lib/cmake/mlir
+ 1271  cmake .. -GNinja    -DLLVM_ENABLE_LLD=OFF    -DCMAKE_BUILD_TYPE=Release    -DLLVM_ENABLE_ASSERTIONS=On    -DMLIR_DIR=${PWD}/../llvm-build/lib/cmake/mlir
+ 1272  ninja check-mlir-hlo
+ 1273  ls
+ 1274  tools
+ 1275  cd tools
+ 1276  ls
+ 1277  vim mlir-hlo-opt/
+ 1278  file mlir-hlo-opt/
+ 1279  cd mlir-hlo-opt/
+ 1280  ls
+ 1281  pwd
+ 1282  ls
+ 1283  cd ..
+ 1284  rm -rf mlir-hlo/
+ 1285  cd tensorflow/
+ 1286  mkdir zhaojieexample
+ 1287  cd zhaojieexample/
+ 1288  wget https://storage.googleapis.com/intel-optimized-tensorflow/models/v1_8/densenet169_fp32_pretrained_model.pb
+ 1289  ls
+ 1290  vim densenet169_fp32_pretrained_model.pb
+ 1291  wget https://github.com/tensorflow/tensorflow/blob/master/tensorflow/compiler/mlir/tensorflow/tests/graphdef2mlir/add.pbtxt
+ 1292  vim add.pbtxt
+ 1293  vim add.pbtxt
+ 1294  ls
+ 1295  touch add1.pbtxt
+ 1296  vim add1.pbtxt
+ 1297  cd ..
+ 1298  ls
+ 1299  cd bazel-bin/
+ 1300  ls
+ 1301  cd tensorflow/
+ 1302  ls
+ 1303  cd compiler/
+ 1304  ls
+ 1305  cd mlir/
+ 1306  ls
+ 1307  tf-mlir-translate ../../../../zhaojieexample/add1.pbtxt
+ 1308  cd tf-mlir-translate
+ 1309  ./tf-mlir-translate ../../../../zhaojieexample/add1.pbtxt
+ 1310  ./tf-mlir-translate ../../../../zhaojieexample/add1.pbtxt -TF_ENABLE_ONEDNN_OPTS=0
+ 1311  ./tf-mlir-translate ../../../../zhaojieexample/add1.pbtxt
+ 1312  ./tf-mlir-translate ../../../../zhaojieexample/add1.pbtxt2022-10-19 12:04:34.786534: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+ 1313  error: need to specify one translation to perform
+ 1314  ./tf-mlir-translate --help
+ 1315*
+ 1316  ./tf-mlir-translate --mlir-tf-to-hlo-text ../../../../zhaojieexample/add1.pbtxt
+ 1317  ls
+ 1318  tf-mlir-translate --mlir-tf-to-hlo-text ../../../../zhaojieexample/add1.pbtxt
+ 1319  cd ../../../../zhaojieexample/
+ 1320  ls
+ 1321  vim add1.pbtxt
+ 1322  cd -
+ 1323  tf-mlir-translate --mlir-tf-to-hlo-text ../../../../zhaojieexample/add1.pbtxt
+ 1324  ./tf-mlir-translate --mlir-tf-to-hlo-text ../../../../zhaojieexample/add1.pbtxt
+ 1325  export TF_ENABLE_ONEDNN_OPTS=0
+ 1326  ./tf-mlir-translate --mlir-tf-to-hlo-text ../../../../zhaojieexample/add1.pbtxt
+ 1327  ./tf-mlir-translate --import-all-index ../../../../zhaojieexample/add1.pbtxt
+ 1328  ./tf-mlir-translate --graphdef-to-mlir ../../../../zhaojieexample/add1.pbtxt
+ 1329  ./tf-mlir-translate --mlir-tf-to-hlo-text /../../../../zhaojieexample/add1.pbtxt
+ 1330  pwd
+ 1331  cd ../../../..
+ 1332  ls
+ 1333  cd zhaojieexample/
+ 1334  ls
+ 1335  mv add1.pbtxt /run/tensorflow/bazel-bin/tensorflow/compiler/mlir/
+ 1336  cd /run/tensorflow/bazel-bin/tensorflow/compiler/mlir/
+ 1337  ls
+ 1338  ./tf-mlir-translate --mlir-tf-to-hlo-text add1.pbtxt
+ 1339  ./tf-mlir-translate --graphdef-to-mlir add1.pbtxt
+ 1340  tf-opt --help
+ 1341  ./tf-opt --help
+ 1342  ./tf-mlir-translate --graphdef-to-mlir add1.pbtxt
+ 1343   --tf-to-hlo-pipeline                                            -   Convert TF dialect to HLO dialect (used for compilation in bridge).
+ 1344  ./tf-opt --help
+ 1345  ./tf-opt --help | grep tf dialect
+ 1346  ./tf-opt --help | grep "tf dialect"
+ 1347  ./tf-opt --help | grep "tf"
+ 1348  ./tf-opt --help | grep "executor"
+ 1349  ./tf-mlir-translate --graphdef-to-mlir add1.pbtxt > add1.mlir
+ 1350  vim add1.mlir
+ 1351  ./tf-opt add1.mlir
+ 1352  cat add1.mlir
+ 1353  ./tf-opt --tf-to-hlo-pipeline add1.mlir
+ 1354  ./tf-opt --help | grep "executor"
+ 1355  ./tf-opt --tf-executor-break-up-islands add1.mlir
+ 1356  ./tf-opt --tf-executor-break-up-islands add1.mlir
+ 1357  ./tf-opt --tf-executor-convert-control-to-data-outputs add1.mlir
+ 1358  ./tf-opt --tf-executor-graph-pruning add1.mlir
+ 1359  ./tf-opt --tf-executor-island-coarsening add1.mlir
+ 1360  ./tf-opt --tf-executor-split-into-island-per-op add1.mlir
+ 1361  ./tf-opt --tf-executor-to-functional-conversion add1.mlir
+ 1362  ./tf-opt --tf-executor-tpu-v1-island-coarsening add1.mlir
+ 1363  ./tf-opt --tf-executor-tpu-v1-island-inlining add1.mlir
+ 1364  ./tf-opt ---tf-executor-tpu-v1-island-outlining add1.mlir
+ 1365  ./tf-opt --tf-executor-tpu-v1-island-outlining add1.mlir
+ 1366  ./tf-opt --tf-executor-update-control-dependencies add1.mlir
+ 1367  ./tf-opt --tf-functional-to-executor-conversion add1.mlir
+ 1368  ./tf-opt --tf-parallel-execute-to-islands add1.mlir
+ 1369  ./tf-opt --tf-replicate-to-island add1.mlir
+ 1370  ./tf-opt --help | grep "tf dialect"
+ 1371  ./tf-opt --help | grep "dialect"
+ 1372  ./tf-opt --convert-complex-to-standard add1.mlir
+ 1373  ./tf-opt --convert-bufferization-to-memref add1.mlir
+ 1374  ./tf-opt --enable-x86vector add1.mlir
+ 1375  ./tf-opt --xla-legalize-tf-communication add1.mlir
+ 1376  ./tf-opt --tfl-optimize add1.mlir
+ 1377  ./tf-opt --tfl-lower-static-tensor-list add1.mlir
+ 1378  ./tf-opt --tfl-legalize-variables-tf add1.mlir
+ 1379  ./tf-opt -- add1.mlir
+ 1380  ./tf-opt --tf-executor-split-into-island-per-op add1.mlir
+ 1381  ./tf-opt --tfl-lift-tflite-flex-ops add1.mlir
+ 1382  ./tf-opt --help
+ 1383  ./tf-opt --tf-standard-pipeline add1.mlir
+ 1384  ./tf-opt --tf-executor-to-functional-conversion add1.mlir
+ 1385  ./tf-opt --test-tf-lower-tf add1.mlir
+ 1386  ./tf-opt --convert-bufferization-to-memref add1.mlir
+ 1387  ./tf-opt --help | grep "op"
+ 1388  ./tf-opt --tf-to-quant add1.mlir
+ 1389  ./tf-opt --help | grep "executor"
+ 1390  ./tf-opt --tf-executor-tpu-v1-island-inlining add1.mlir
